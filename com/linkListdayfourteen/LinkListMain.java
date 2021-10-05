@@ -93,23 +93,6 @@ class operations{
 
 	}
 
-
-	public void pop() {
-		this.head=this.head.next;
-	}
-
-	public void deleteEnd() {
-		
-		Node tempNode=head;
-		while(!tempNode.next.equals(tail))
-		{
-			tempNode=tempNode.next;
-		}
-			this.tail=tempNode;
-			tempNode.next=null;
-			
-	}
-
 }
 
 
@@ -149,21 +132,8 @@ class LinkList {
 
 	}
 
-	public void deleteFirstNode() {
-		addDataStart();
-		link.pop();
-		System.out.println("\nafter deleting first element: ");
-		link.print();
-	}
 
-	public void deleteLastNode() {
 
-		addDataStart();
-		link.deleteEnd();
-		System.out.println("\nafter deleting last element: ");
-		link.print();
-
-	}
 }
 
 
@@ -179,8 +149,7 @@ public	class LinkListMain{
 		System.out.println("Press 1 to add data at start");
 		System.out.println("Press 2 to add data at end");
 		System.out.println("Press 3 to insert data in between");
-		System.out.println("Press 4 to delete first element");
-		System.out.println("Press 5 to delete last element");
+		
 		int input=sc.nextInt();
 
 		switch (input) {
@@ -206,17 +175,7 @@ public	class LinkListMain{
 		case 3:
 
 			obj.insertInBetewwn();
-			break;	
-
-		case 4:
-
-			obj.deleteFirstNode();
-			break;	
-		case 5:
-
-			obj.deleteLastNode();
-			break;	
-
+			break;		
 
 		default:
 			System.out.println("Invalid Choice");
